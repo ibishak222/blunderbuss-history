@@ -10,8 +10,9 @@ Two scheduled tasks run this channel:
 | Blunderbuss: post next video | 08:01, 10:01, 12:01, 14:01, 16:01, 18:01 | Upload the next `ready` item in `queue.json` to YouTube |
 | Blunderbuss: production batch | 18:37 and 22:13 | Make 3 new episodes per batch for tomorrow's 6 slots, add them to the queue |
 
-Files: code and queue live in this repo. Finished MP4s and thumbnails are **release assets** on the release tagged `videos`
-(public download URL: `https://github.com/ibishak222/blunderbuss-history/releases/download/videos/<file>`).
+Files: code and queue live on `main`. Finished MP4s and thumbnails for each publish date live on their own orphan branch
+**`videos-YYYY-MM-DD`** under `videos/` (GitHub releases are not available from these sessions). Each queue item has
+`video_url` / `thumbnail_url` (raw.githubusercontent.com links to that branch).
 
 ---
 
@@ -24,9 +25,9 @@ YouTube account in Composio: alias **blunderbuss** (youtube_mirate-zone, @blunde
    If there is none for this slot, take the earliest `ready` item from an earlier date. If nothing is ready, stop and report "queue empty".
 3. Duplicate guard: list the channel's latest uploads (Composio `YOUTUBE_LIST_CHANNEL_VIDEOS`, `mine: true`). If a video with the same title already exists, mark the item `posted` with that id and stop.
 4. Upload via Composio (YouTube toolkit is connected in Composio):
-   - In `COMPOSIO_REMOTE_WORKBENCH`: download the MP4 from the release asset URL to `/home/user/`, then `upload_local_file(path)` → take `s3key`.
+   - In `COMPOSIO_REMOTE_WORKBENCH`: `requests.get(item["video_url"])` to `/home/user/`, then `upload_local_file(path)` → take `s3key` (tested: works, ~3 s per 10 MB).
    - Run `YOUTUBE_UPLOAD_VIDEO` with `title`, `description`, `tags`, `categoryId` ("27" Education), `privacyStatus: "public"`, and `videoFilePath: {name, mimetype: "video/mp4", s3key}`.
-   - If the item has a thumbnail: `YOUTUBE_UPDATE_THUMBNAIL` with `videoId` and the thumbnail's release URL. (Fails until the channel is phone-verified; that's not fatal.)
+   - If the item has a thumbnail: `YOUTUBE_UPDATE_THUMBNAIL` with `videoId` and `thumbnail_url`. (Fails until the channel is phone-verified; that's not fatal.)
 5. Update the item: `status: "posted"`, `youtube_id`, `posted_at`. Commit `queue.json` and push.
 6. **If the upload fails with `quotaExceeded`** (Composio's shared YouTube quota): do not retry in a loop. Set `status: "ready"` (unchanged), add `last_error`, commit, and send the owner a short notification:
    "Couldn't post <title> at <slot>: YouTube API quota. Files: <video URL>, <thumbnail URL>. You can upload it in YouTube Studio; I'll retry at the next slot."
@@ -47,7 +48,8 @@ Target: by the end of the night, tomorrow has 6 `ready` items, one per slot. Eac
    6. **QA (required)**: contact sheet every ~25 s plus 6 full-size frames. Check that the captions are readable, nothing is clipped or cut off at the frame edge, lights and gunfire come from the right source, objects sitting on water or ground stay attached as the camera moves, there are no long static stretches (split any scene longer than about 40 s by giving some paragraphs a different shot), and the scene matches the narration. Fix and re-render if needed.
    7. **Thumbnail** 1280×720: 2–3 huge Anton words (cream + gold, dark stroke), one dramatic image, red year tag. Must be under 2 MB.
    8. **Metadata**: title (outcome first, under 70 chars), description (2-line hook, chapter timestamps from `chapters.txt`, sources, 3–5 hashtags), tags.
-4. Upload the MP4 and thumbnail as assets on the `videos` release (`gh release upload videos <files> --clobber`), add an item to `queue.json` for tomorrow's next free slot (`status: "ready"`), mark the topic `done` in `topics.md`, and commit the episode folder `pipeline/epN/` (code only, no renders).
+4. Store files: `git fetch --depth=1 origin videos-<tomorrow>` if it exists, otherwise `git checkout --orphan videos-<tomorrow>` with an empty tree. Add the MP4 and thumbnail under `videos/`, **one file per commit, push after each** (files must stay under 100 MB; re-encode with a higher CRF if needed). Then on `main`: add the queue item for tomorrow's next free slot (`status: "ready"`, `video_url`/`thumbnail_url` = raw.githubusercontent.com links to that branch), mark the topic `done` in `topics.md`, commit `pipeline/epN/` (code only, no renders), push.
+   Housekeeping: delete remote `videos-*` branches whose date is 3 or more days ago and whose items are all `posted` (`git push origin --delete videos-<date>`).
 5. Report: titles made, slots filled, anything that failed. If fewer than 3 were finished, say so. The posting run will skip empty slots.
 
 ## Rules that always apply

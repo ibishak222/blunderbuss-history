@@ -8,7 +8,6 @@
   "16:00",
   "18:00"
  ],
- "release_tag": "videos",
  "items": [
   {
    "id": "ep1",
@@ -30,7 +29,9 @@
    "category_id": "27",
    "status": "ready",
    "youtube_id": null,
-   "posted_at": null
+   "posted_at": null,
+   "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_DoggerBank_FullStory.mp4",
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_DoggerBank.png"
   },
   {
    "id": "ep2",
@@ -51,7 +52,9 @@
    "category_id": "27",
    "status": "ready",
    "youtube_id": null,
-   "posted_at": null
+   "posted_at": null,
+   "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_EmuWar.mp4",
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_EmuWar.png"
   },
   {
    "id": "ep3",
@@ -73,7 +76,9 @@
    "category_id": "27",
    "status": "ready",
    "youtube_id": null,
-   "posted_at": null
+   "posted_at": null,
+   "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_Vasa.mp4",
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_Vasa.png"
   },
   {
    "id": "ep4",
@@ -95,7 +100,9 @@
    "category_id": "27",
    "status": "ready",
    "youtube_id": null,
-   "posted_at": null
+   "posted_at": null,
+   "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_HMSVictoria.mp4",
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_HMSVictoria.png"
   },
   {
    "id": "ep5",
@@ -117,7 +124,9 @@
    "category_id": "27",
    "status": "ready",
    "youtube_id": null,
-   "posted_at": null
+   "posted_at": null,
+   "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_MarsClimateOrbiter.mp4",
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_MarsClimateOrbiter.png"
   },
   {
    "id": "short1",
@@ -136,7 +145,10 @@
    "category_id": "27",
    "status": "ready",
    "youtube_id": null,
-   "posted_at": null
+   "posted_at": null,
+   "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_DoggerBank_Short.mp4",
+   "thumbnail_url": null
   }
- ]
+ ],
+ "storage": "Each day's files live on branch videos-<publish_date> under videos/. Download via raw.githubusercontent.com."
 }
