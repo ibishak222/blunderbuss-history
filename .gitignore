@@ -1,0 +1,6 @@
+tts/
+*.wav
+*.mp4
+layers/
+cache/
+prev_*

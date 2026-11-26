@@ -1,0 +1,142 @@
+{
+ "timezone": "Europe/London",
+ "slots": [
+  "08:00",
+  "10:00",
+  "12:00",
+  "14:00",
+  "16:00",
+  "18:00"
+ ],
+ "release_tag": "videos",
+ "items": [
+  {
+   "id": "ep1",
+   "publish_date": "2026-11-27",
+   "slot": "08:00",
+   "video": "Blunderbuss_DoggerBank_FullStory.mp4",
+   "thumbnail": "Thumbnail_DoggerBank.png",
+   "title": "The Navy That Declared War on Fishermen | The Dogger Bank Incident",
+   "description": "In October 1904, Russia's Baltic Fleet sailed to fight Japan, and in the middle of the North Sea it opened fire on a fleet of British fishing trawlers from Hull. This is the full story of the Dogger Bank incident, and the disastrous voyage that ended at Tsushima.\n\n0:00 Intro\n0:36 A War on the Other Side of the World\n2:16 The Fear\n3:05 The Kamchatka\n3:40 Dogger Bank\n5:17 The Russian Outrage\n6:33 The Long Road to Tsushima\n6:56 Stranded at Madagascar\n7:58 Tsushima\n9:16 Aftermath\n10:19 What Remains\n\nSources: Permanent Court of Arbitration (Dogger Bank case); Britannica; US State Department Office of the Historian; US Naval Institute.\n\n#history #documentary #navalhistory #blunderbusshistory",
+   "tags": [
+    "history",
+    "documentary",
+    "dogger bank incident",
+    "russo-japanese war",
+    "naval history",
+    "tsushima",
+    "blunderbuss history"
+   ],
+   "category_id": "27",
+   "status": "ready",
+   "youtube_id": null,
+   "posted_at": null
+  },
+  {
+   "id": "ep2",
+   "publish_date": "2026-11-27",
+   "slot": "10:00",
+   "video": "Blunderbuss_EmuWar.mp4",
+   "thumbnail": "Thumbnail_EmuWar.png",
+   "title": "The Australian Army Lost a War to Emus | The Great Emu War",
+   "description": "In 1932, Australia sent soldiers with machine guns to fight 20,000 emus in the wheat fields of Western Australia. A month later, the soldiers were pulled out. This is the full story of the Great Emu War.\n\n0:00 Intro\n0:31 Soldiers Become Farmers\n1:39 The Invasion\n2:43 Declaring War\n4:20 First Contact\n4:58 The Birds Fight Back\n5:41 Retreat\n6:15 Round Two\n7:03 Who Really Won?\n9:01 What Remains\n\nSources: Wikipedia, \"Emu War\", and the sources it cites.\n\n#history #emuwar #australia #documentary #blunderbusshistory",
+   "tags": [
+    "history",
+    "emu war",
+    "great emu war",
+    "australia",
+    "documentary",
+    "blunderbuss history"
+   ],
+   "category_id": "27",
+   "status": "ready",
+   "youtube_id": null,
+   "posted_at": null
+  },
+  {
+   "id": "ep3",
+   "publish_date": "2026-11-27",
+   "slot": "12:00",
+   "video": "Blunderbuss_Vasa.mp4",
+   "thumbnail": "Thumbnail_Vasa.png",
+   "title": "Sweden's Mightiest Warship Sank in 20 Minutes | The Vasa",
+   "description": "In 1628, Sweden launched the most powerful warship it had ever built. In front of the whole of Stockholm, it sailed about 1,300 metres and sank. 333 years later, it came back. This is the full story of the Vasa.\n\n0:00 Intro\n0:33 The King's Navy\n1:22 Building a Giant\n3:05 The Test\n3:38 Twenty Minutes\n4:46 Who's to Blame?\n5:34 333 Years in the Dark\n8:13 What Remains\n\nSources: Wikipedia, \"Vasa (ship)\"; the Vasa Museum, Stockholm.\n\n#history #vasa #sweden #shipwreck #blunderbusshistory",
+   "tags": [
+    "history",
+    "vasa",
+    "vasa ship",
+    "sweden",
+    "shipwreck",
+    "documentary",
+    "blunderbuss history"
+   ],
+   "category_id": "27",
+   "status": "ready",
+   "youtube_id": null,
+   "posted_at": null
+  },
+  {
+   "id": "ep4",
+   "publish_date": "2026-11-27",
+   "slot": "14:00",
+   "video": "Blunderbuss_HMSVictoria.mp4",
+   "thumbnail": "Thumbnail_HMSVictoria.png",
+   "title": "The Admiral Who Sank His Own Flagship | HMS Victoria, 1893",
+   "description": "In 1893, Britain's Mediterranean Fleet was on a calm exercise off Tripoli when its admiral ordered two lines of battleships to turn towards each other. Fifteen minutes later, his flagship was on the seabed. This is the full story of the loss of HMS Victoria.\n\n0:00 Intro\n0:37 The Pride of the Fleet\n2:29 The Order\n3:58 What Are You Waiting For?\n4:40 Collision\n5:40 Fifteen Minutes\n6:28 The Court Martial\n8:31 What Remains\n\nSources: Wikipedia (HMS Victoria (1887), Sinking of HMS Victoria, George Tryon); 1893 court-martial reports via Papers Past.\n\n#history #royalnavy #navalhistory #blunderbusshistory",
+   "tags": [
+    "history",
+    "hms victoria",
+    "royal navy",
+    "naval history",
+    "victorian",
+    "documentary",
+    "blunderbuss history"
+   ],
+   "category_id": "27",
+   "status": "ready",
+   "youtube_id": null,
+   "posted_at": null
+  },
+  {
+   "id": "ep5",
+   "publish_date": "2026-11-27",
+   "slot": "16:00",
+   "video": "Blunderbuss_MarsClimateOrbiter.mp4",
+   "thumbnail": "Thumbnail_MarsClimateOrbiter.png",
+   "title": "NASA Lost a Mars Spacecraft Because of Pounds vs Newtons",
+   "description": "In 1999, NASA's Mars Climate Orbiter flew 669 million km to Mars and was lost on arrival because one team's software worked in pounds and the other's in newtons. This is the full story, including the warnings nobody acted on.\n\n0:00 Intro\n0:38 Faster, Better, Cheaper\n2:32 Launch\n3:24 Pounds and Newtons\n4:44 Warning Signs\n5:46 Arrival\n7:26 Who's to Blame?\n8:47 What Remains\n\nSources: Wikipedia, \"Mars Climate Orbiter\"; NASA Mishap Investigation Board Phase I Report (10 November 1999).\n\n#history #nasa #space #mars #blunderbusshistory",
+   "tags": [
+    "history",
+    "nasa",
+    "mars climate orbiter",
+    "space",
+    "engineering",
+    "documentary",
+    "blunderbuss history"
+   ],
+   "category_id": "27",
+   "status": "ready",
+   "youtube_id": null,
+   "posted_at": null
+  },
+  {
+   "id": "short1",
+   "publish_date": "2026-11-27",
+   "slot": "18:00",
+   "video": "Blunderbuss_DoggerBank_Short.mp4",
+   "thumbnail": null,
+   "title": "The Navy That Declared War on Fishermen #shorts",
+   "description": "In 1904 the Russian Baltic Fleet fired on British fishing trawlers in the North Sea, thinking they were Japanese torpedo boats. Full story on the channel.\n\n#shorts #history #historyfacts #blunderbusshistory",
+   "tags": [
+    "history",
+    "shorts",
+    "dogger bank incident",
+    "naval history"
+   ],
+   "category_id": "27",
+   "status": "ready",
+   "youtube_id": null,
+   "posted_at": null
+  }
+ ]
+}

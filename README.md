@@ -1,2 +1,3 @@
-# blunderbuss-history
-Blunderbuss History: automated pipeline and posting queue for the faceless history channel
+# Blunderbuss History
+Pipeline, posting queue and runbook for the Blunderbuss History YouTube channel.
+See RUNBOOK.md. Finished videos are release assets on the `videos` release.

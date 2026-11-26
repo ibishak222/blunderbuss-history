@@ -1,0 +1,20 @@
+<!-- blunderbuss icon, drawn pointing right, origin approx 0..600 x 0..240 -->
+<g id="gun">
+  <!-- stock -->
+  <path d="M10 170 C 40 150, 120 128, 200 112 L 262 104 L 268 140 L 215 146 C 170 160, 110 196, 40 222 C 22 228, 4 206, 10 170 Z" fill="#7A4A2A" stroke="#14202E" stroke-width="10" stroke-linejoin="round"/>
+  <!-- stock grain line -->
+  <path d="M48 196 C 100 172, 150 150, 205 134" fill="none" stroke="#5C361E" stroke-width="6" stroke-linecap="round"/>
+  <!-- barrel -->
+  <path d="M250 100 L 470 92 L 470 126 L 250 134 Z" fill="#C9A04A" stroke="#14202E" stroke-width="10" stroke-linejoin="round"/>
+  <!-- flared bell muzzle -->
+  <path d="M462 92 C 500 88, 530 66, 556 52 L 556 166 C 530 152, 500 130, 462 126 Z" fill="#C9A04A" stroke="#14202E" stroke-width="10" stroke-linejoin="round"/>
+  <ellipse cx="556" cy="109" rx="14" ry="57" fill="#14202E"/>
+  <!-- barrel bands -->
+  <rect x="318" y="92" width="14" height="40" fill="#14202E" transform="skewY(-2)"/>
+  <rect x="400" y="92" width="14" height="38" fill="#14202E" transform="skewY(-2)"/>
+  <!-- lock + hammer -->
+  <path d="M236 108 L 236 86 L 254 74 L 262 82 L 250 92 L 252 108 Z" fill="#14202E"/>
+  <!-- trigger guard -->
+  <path d="M214 146 C 214 176, 262 176, 262 140" fill="none" stroke="#14202E" stroke-width="9" stroke-linecap="round"/>
+  <path d="M236 146 L 230 162" stroke="#14202E" stroke-width="8" stroke-linecap="round"/>
+</g>
