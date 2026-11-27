@@ -16,22 +16,17 @@ Files: code and queue live on `main`. Finished MP4s and thumbnails for each publ
 
 ---
 
-## A. Posting run (one video per run)
-YouTube account in Composio: alias **blunderbuss** (youtube_mirate-zone, @blunderbusshistorychannel). Always pass it.
+## A. Posting (every slot, 1 minute past)
 
+Runs entirely in the Composio workbench: no add_repo, no git (add_repo failed in the 27 Nov 08:01 run).
 
-1. `add_repo` this repo (access: push), clone it, read `queue.json`.
-2. Pick the item whose `publish_date` is today (Europe/London) and whose `slot` is the slot this run is for (the next slot after now), with `status: "ready"`.
-   If there is none for this slot, take the earliest `ready` item from an earlier date. If nothing is ready, stop and report "queue empty".
-3. Duplicate guard: list the channel's latest uploads (Composio `YOUTUBE_LIST_CHANNEL_VIDEOS`, `mine: true`). If a video with the same title already exists, mark the item `posted` with that id and stop.
-4. Upload via Composio (YouTube toolkit is connected in Composio):
-   - In `COMPOSIO_REMOTE_WORKBENCH`: `requests.get(item["video_url"])` to `/home/user/`, then `upload_local_file(path)` → take `s3key` (tested: works, ~3 s per 10 MB).
-   - Run `YOUTUBE_UPLOAD_VIDEO` with `title`, `description`, `tags`, `categoryId` ("27" Education), `privacyStatus: "public"`, and `videoFilePath: {name, mimetype: "video/mp4", s3key}`.
-   - If the item has a thumbnail: `YOUTUBE_UPDATE_THUMBNAIL` with `videoId` and `thumbnail_url`. (Fails until the channel is phone-verified; that's not fatal.)
-5. Update the item: `status: "posted"`, `youtube_id`, `posted_at`. Commit `queue.json` and push.
-6. **If the upload fails with `quotaExceeded`** (Composio's shared YouTube quota): do not retry in a loop. Set `status: "ready"` (unchanged), add `last_error`, commit, and send the owner a short notification:
-   "Couldn't post <title> at <slot>: YouTube API quota. Files: <video URL>, <thumbnail URL>. You can upload it in YouTube Studio; I'll retry at the next slot."
-7. Never post the same item twice. Never change the channel's settings. Never delete videos.
+1. Read `queue.json` with the GitHub contents API through Composio (`proxy_execute GET .../contents/queue.json`, toolkit `github`), keep its `sha`.
+2. Pick the earliest `ready` item whose publish_date/slot is now or earlier (catch-up included).
+3. YouTube account alias `blunderbuss` only (channel UCB3aLK209JPbodZ7O-qhVeQ).
+4. Duplicate guard: uploads playlist `UUB3aLK209JPbodZ7O-qhVeQ` via `proxy_execute`.
+5. Download `video_url` → `upload_local_file` → `YOUTUBE_UPLOAD_VIDEO` (public, category 27) → `YOUTUBE_UPDATE_THUMBNAIL` with `thumbnail_url`. Until the channel is phone-verified the thumbnail call fails: set `thumbnail_pending: true`; later runs retry pending thumbnails.
+6. Write `queue.json` back with the contents API `PUT` (message, base64 content, sha, branch main). On 409/422 re-read and retry once.
+7. On a YouTube error retry once after ~2 min; if it still fails write `last_error`, leave `ready`, notify the owner.
 
 ## B. Production batch (3 episodes per batch)
 
