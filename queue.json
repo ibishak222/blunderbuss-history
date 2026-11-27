@@ -51,11 +51,13 @@
     "blunderbuss history"
    ],
    "category_id": "27",
-   "status": "ready",
-   "youtube_id": null,
-   "posted_at": null,
+   "status": "posted",
+   "youtube_id": "LoO6firfeKQ",
+   "posted_at": "2026-11-27T10:02:37Z",
    "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_EmuWar.mp4",
-   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_EmuWar.png"
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_EmuWar.png",
+   "thumbnail_pending": true,
+   "last_error": null
   },
   {
    "id": "ep3",
