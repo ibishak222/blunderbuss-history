@@ -79,11 +79,12 @@
     "blunderbuss history"
    ],
    "category_id": "27",
-   "status": "ready",
-   "youtube_id": null,
-   "posted_at": null,
+   "status": "posted",
+   "youtube_id": "X1HkkqAgfQ0",
+   "posted_at": "2026-11-27T14:03:11Z",
    "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_Vasa.mp4",
-   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_Vasa.png"
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_Vasa.png",
+   "thumbnail_pending": true
   },
   {
    "id": "ep4",
