@@ -52,11 +52,14 @@
     "blunderbuss history"
    ],
    "category_id": "27",
-   "status": "ready",
+   "status": "posted",
    "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_EmuWar.mp4",
    "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_EmuWar.png",
    "last_error": null,
-   "note": "First upload LoO6firfeKQ was discarded by YouTube (broken YOUTUBE_UPLOAD_VIDEO); re-queue"
+   "note": "First upload LoO6firfeKQ was discarded by YouTube (broken YOUTUBE_UPLOAD_VIDEO); re-queue",
+   "youtube_id": "VL907EigJws",
+   "posted_at": "2026-11-27T12:03:28Z",
+   "thumbnail_pending": true
   },
   {
    "id": "ep3",
