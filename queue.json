@@ -130,11 +130,12 @@
     "blunderbuss history"
    ],
    "category_id": "27",
-   "status": "ready",
-   "youtube_id": null,
-   "posted_at": null,
+   "status": "posted",
+   "youtube_id": "gaY_KzcZtf8",
+   "posted_at": "2026-11-27T18:03:29Z",
    "video_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Blunderbuss_MarsClimateOrbiter.mp4",
-   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_MarsClimateOrbiter.png"
+   "thumbnail_url": "https://raw.githubusercontent.com/ibishak222/blunderbuss-history/videos-2026-11-27/videos/Thumbnail_MarsClimateOrbiter.png",
+   "thumbnail_pending": true
   },
   {
    "id": "short1",
