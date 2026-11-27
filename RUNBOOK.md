@@ -24,7 +24,7 @@ Runs entirely in the Composio workbench: no add_repo, no git (add_repo failed in
 2. Pick the earliest `ready` item whose publish_date/slot is now or earlier (catch-up included).
 3. YouTube account alias `blunderbuss` only (channel UCB3aLK209JPbodZ7O-qhVeQ).
 4. Duplicate guard: uploads playlist `UUB3aLK209JPbodZ7O-qhVeQ` via `proxy_execute`.
-5. Download `video_url` → `upload_local_file` → `YOUTUBE_UPLOAD_VIDEO` (public, category 27) → `YOUTUBE_UPDATE_THUMBNAIL` with `thumbnail_url`. Until the channel is phone-verified the thumbnail call fails: set `thumbnail_pending: true`; later runs retry pending thumbnails.
+5. Download `video_url` → `upload_local_file` → **`YOUTUBE_MULTIPART_UPLOAD_VIDEO`** (public, category 27; id in `data.video.id`). Never use `YOUTUBE_UPLOAD_VIDEO`: on 27 Nov it reported success but YouTube discarded every upload within seconds. Verify: poll `videos.list` (status, processingDetails, fileDetails) for up to 3 min; the video must still exist with the full file size before it's marked posted. Then `YOUTUBE_UPDATE_THUMBNAIL` with `thumbnail_url`; until the channel is phone-verified that fails, so set `thumbnail_pending: true` (later runs retry).
 6. Write `queue.json` back with the contents API `PUT` (message, base64 content, sha, branch main). On 409/422 re-read and retry once.
 7. On a YouTube error retry once after ~2 min; if it still fails write `last_error`, leave `ready`, notify the owner.
 
